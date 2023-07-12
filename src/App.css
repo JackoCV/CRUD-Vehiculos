@@ -1,10 +1,36 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #282c34;
+  --secondary-color: #61dafb;
+  --light-color: #ffffff;
+  --dark-color: #000000;
+  --logo-height: 40vmin;
+  --header-font-size: calc(10px + 2vmin);
 }
 
+.App {
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+
+
+
 .App-logo {
-  height: 40vmin;
+  height: var(--logo-height);
   pointer-events: none;
+  margin-bottom: 1rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,18 +40,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--primary-color);
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: var(--header-font-size);
+  color: var(--light-color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--secondary-color);
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +60,47 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* New styles for Navbar */
+.Navbar {
+  background-color: var(--primary-color);
+}
+
+.Navbar .Nav-link {
+  color: var(--light-color);
+}
+
+.Navbar .Nav-link:hover {
+  color: var(--secondary-color);
+}
+
+.Container {
+  width: 100%;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.h-100 {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .Container {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .Container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
