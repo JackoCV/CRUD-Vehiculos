@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Práctica de Desarrollo de ReactJS - Registro de Vehículos y Características
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta es una aplicación ReactJS para el registro de vehículos y todas sus características. Permite a los usuarios agregar, editar y eliminar vehículos, así como gestionar las diferentes características asociadas a cada uno.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- Interfaz de usuario intuitiva y amigable.
+- Capacidad para agregar un nuevo vehículo con sus datos correspondientes.
+- Asociación de un vehículo con diferentes características.
+- Edición de los detalles de un vehículo existente y sus características.
+- Funcionalidad de eliminar un vehículo de la lista.
+- Actualización dinámica de la lista de vehículos y sus características.
+- Mantenimiento del estado de los vehículos y características tras recargar la página.
+- Estructura y modularización del código mediante componentes ReactJS.
+- Implementación de buenas prácticas de desarrollo en ReactJS.
+- Funcionalidad de búsqueda y filtrado de vehículos.
+- Validaciones de datos ingresados.
+- Estilos y diseño personalizados utilizando CSS o librerías de componentes.
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pre-requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js y npm instalados en su máquina. Visite [Node.js](https://nodejs.org/en/download/) para descargar e instalar.
+- Git instalado en su máquina. Visite [Git](https://git-scm.com/downloads) para descargar e instalar.
 
-### `npm test`
+### Pasos de instalación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clonar el repositorio:
 
-### `npm run build`
+   \`\`\`bash
+   git clone https://github.com/JackoCV/CRUD-Vehiculos.git
+   \`\`\`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navegar hasta el directorio del proyecto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   \`\`\`bash
+   cd directorio-del-proyecto
+   \`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instalar las dependencias del proyecto:
 
-### `npm run eject`
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Iniciar la aplicación:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   \`\`\`bash
+   npm start
+   \`\`\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ahora, la aplicación debería estar corriendo en \`http://localhost:3000\`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Uso
 
-## Learn More
+### Agregar un nuevo vehículo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1-Dar click en el boton "Agregar Vehiculo" ubicado en la esquina superior derecha.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2-Debe registrar los detalles del vechiculo.
 
-### Code Splitting
+3-Las caracteristicas del vehiculo deben ser asociadas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4-Dar click botón "Guardar".
 
-### Analyzing the Bundle Size
+5-En caso de no haber completado los espacios correctamente, se mmostrará un error.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Editar un vehículo existente
 
-### Making a Progressive Web App
+1-Dar click en el ícono "Editar Vehiculo" ubicado en la columna de "Acciones" de la lista.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2-Reliza los cambios en los espacios.
 
-### Advanced Configuration
+3-Dar click botón "Guardar".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Eliminar un vehículo de la lista
 
-### Deployment
+1-Ubicar el vehículo que desea elminar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2-Dar click en ícono "Eliminar".
 
-### `npm run build` fails to minify
+### Búsqueda y filtrado de vehículos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1-Ir a la parte superior de la lista.
+
+2-Ingresar marca, modelo o año para que se filtre la búsqueda.
+
+### Validación de datos ingresados
+
+1-Datos que ngativos (No lo permite).
+
+2-Intentar guardar sin llenar los campos (No permitirá guardar).
+
+3-Ingresar un año menor a 1960 (No permitirá guardar).
+
+4-Formulario Incompleto (No permite guardar si no están las caracteristicas completas).
+
+
+## Construido con
+
+- [ReactJS](https://reactjs.org/)
+- [Material-UI](https://material-ui.com/) / [Bootstrap](https://getbootstrap.com/)
+
+
+## Contacto
+
+Jacksem Cortés Vásquez - jacksem.cortezv14@gmail.com
